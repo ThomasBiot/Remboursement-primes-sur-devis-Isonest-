@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devis Isonest après le remboursement des primes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Devis Isonest après le remboursement des primes</h1>
+
+        <!-- Montant du devis initial -->
+        <div class="full-width">
+            <label for="montantDevis">Montant du devis initial TTC (€) :</label>
+            <input type="number" id="montantDevis" required>
+        </div>
+
+        <form id="calculationForm">
+            <div class="form-grid">
+
+                <!-- Section Toiture -->
+                <div class="form-column">
+                    <h3>Toiture</h3>
+                    <label for="montantToiture">Montant travaux TTC (€) :</label>
+                    <input type="number" id="montantToiture" required>
+                    <label for="superficieToiture">Superficie toiture (m²) :</label>
+                    <input type="number" id="superficieToiture" required>
+                    <label for="remboursementToitureM2">Remboursement par m² (€) :</label>
+                    <input type="number" id="remboursementToitureM2" required>
+                </div>
+
+                <!-- Section Murs -->
+                <div class="form-column">
+                    <h3>Murs</h3>
+                    <label for="montantMurs">Montant travaux TTC (€) :</label>
+                    <input type="number" id="montantMurs" required>
+                    <label for="superficieMurs">Superficie murs (m²) :</label>
+                    <input type="number" id="superficieMurs" required>
+                    <label for="remboursementMursM2">Remboursement par m² (€) :</label>
+                    <input type="number" id="remboursementMursM2" required>
+                </div>
+
+                <!-- Section Sol -->
+                <div class="form-column">
+                    <h3>Sol</h3>
+                    <label for="montantSol">Montant travaux TTC (€) :</label>
+                    <input type="number" id="montantSol" required>
+                    <label for="superficieSol">Superficie sol (m²) :</label>
+                    <input type="number" id="superficieSol" required>
+                    <label for="remboursementSolM2">Remboursement par m² (€) :</label>
+                    <input type="number" id="remboursementSolM2" required>
+                </div>
+
+                <!-- Section Autres -->
+                <div class="form-column">
+                    <h3>Autres</h3>
+                    <label for="montantAutres">Montant travaux TTC (€) :</label>
+                    <input type="number" id="montantAutres" required>
+                    <label for="autres">Superficie autres (m²) :</label>
+                    <input type="number" id="autres" required>
+                    <label for="remboursementAutresM2">Remboursement par m² (€) :</label>
+                    <input type="number" id="remboursementAutresM2" required>
+                </div>
+            </div>
+
+            <div class="full-width">
+                <button type="submit">Calcul du devis final</button>
+            </div>
+        </form>
+        
+        <div class="result">
+            <h2>Devis Isonest après remboursement : <span id="devisFinal">0</span> €</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
